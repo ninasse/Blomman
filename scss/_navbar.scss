@@ -4,13 +4,21 @@
             height: 85px;
         }
     }
-    .badge {
-        background-color: $main-color;
-        
+    .navbar-nav {
+        .nav-item {
+            .btn-link {
+                .fa-shopping-cart {
+                    color: $main-color2;
+                    font-size: 2rem;
+                }
+                .badge {
+                    background-color: $main-color;
+            
+                }
+            }
+        }
     }
-    .btn-link {
-        color: ;
-    }
+    
     .btn-link:hover, .btn-link:active {
         text-decoration: none;
     }
