@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <title>Blomman.se - Kassa</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <!-- jQuery script -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+
+        <!-- Bootstrap script -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+        <!--Font awesome script -->
+        <script src="https://kit.fontawesome.com/40201fed75.js" crossorigin="anonymous"></script>
+
+        <!-- Own jQuery script -->
+        <script type="text/javascript" src="../js/checkout.js"></script>
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+
+        <!-- Own CSS -->
+        <link rel="stylesheet" href="../css/main.css"/>
+
+    </head>
+
+    <body>
+        <!-- Navbar Start -->
+        <div class="container">
+            <nav class="navbar navbar-expand bg-white d-flex justify-content-between border-bottom p-0">
+                <a class="navbar-brand p-0" href="../index.html">
+                    <div class="logo-container">
+                        <img src="../img/logo.jpg" alt="Logo Blomman.se" class="img-fluid" />
+                    </div>
+                </a>
+                <div class="navbar-nav" style="visibility: hidden;">
+                    <div class="nav-item">
+                        <button type="button" class="btn btn-link pr-3" id="cart">
+                            <img src="../img/shopping-cart.png" height="50" alt="Varukorg">
+                            <span class="badge badge-pill m-0"></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+        <!-- Content Start -->
+        <section id="checkout">
+            <h1 class="checkoutheader py-1">KASSA</h1>
+            <div class="container" id="orderctn">
+                <div class= "row pt-3 border-bottom">
+                    <h5 class="col-4 text-center" id="prodHeader">Produkt</h5>
+                    <h5 class="col-3" id="quantHeader">Antal</h5>
+                    <h5 class="col-2" id="priceHeader">Pris</h5>
+                    <h5 class="col-2" id="totHeader">Total</h5>
+                    <h5 class="col-1 pr-1">&nbsp;</h5>
+                </div>
+            </div>
+            <div class="container" id="sum">
+                <div class= "row pt-3 justify-content-end border-top">
+                    <p class="col-4 col-md-2 text-right pr-0">Moms 25%</p>
+                    <p id="vatTotal" class="col-4 col-md-2"></p>
+                </div>
+                <div class="row justify-content-end border-bottom">
+                    <p class="col-4 col-md-2 text-right pr-0">Totalt</p>
+                    <p id="sumTotal" class="col-4 col-md-2"></p>
+                </div> 
+            </div> 
+            
+            <div class="accordion" id="checkoutAccordion">
+                <form action="confirmation.html" id="customerform" class="needs-validation" novalidate>
+                    <h3 class="mb-0">
+                        <button class="btn accordionButton checkoutheader" type="button"    id="showCustomerDetails">
+                            KUNDUPPGIFTER
+                        </button>
+                    </h3>
+                    <div id="customerDetails" class="collapse show">
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="inputName">Förnamn</label>
+                                <input type="text" class="form-control" id="customerName"name="customerName" required>
+                                <div class="valid-feedback"></div>
+                                <div class="invalid-feedback">Vänligen fyll i namn.</div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="inputLastName">Efternamn</label>
+                                <input type="text" class="form-control" id="customerLastName"name="customerLastName" required>
+                                <div class="valid-feedback"></div>
+                                <div class="invalid-feedback">Vänligen fyll i efternamn.</div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="inputAddress">Adress</label>
+                                <input type="text" class="form-control" id="customerAddress"name="customerAddress" required>
+                                <div class="valid-feedback"></div>
+                                <div class="invalid-feedback">Vänligen fyll i adress.</div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="inputCO">C/O</label>
+                                <input type="text" class="form-control" id="customerCO">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="inputZip">Postnummer</label>
+                                <input type="number" class="form-control" id="customerZip">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="inputcity">Ort</label>
+                                <input type="text" class="form-control" id="customerCity"name="custoemrZip" required>
+                                <div class="valid-feedback"></div>
+                                <div class="invalid-feedback">Vänligen fyll i ort.</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail">E-post adress</label>
+                            <input type="email" class="form-control" id="customerEmail"name="customerEmail" required>
+                            <div class="valid-feedback"><i class="fas fa-check"></i></div>
+                            <div class="invalid-feedback">Vänligen fyll i e-postadress.</div>
+                        </div>
+                    </div>
+                    <h3 class="mb-0">
+                        <button class="btn accordionButton checkoutheader" type="button" id="submitCForm">VÄLJ BETALNINGSMETOD</button>
+                    </h3>
+                    <div class="container collapse" id="paymentMethod">
+                        <div class="row p-2 mt-3">
+                            <div class="col-6 radio pr-0">
+                                <label><input type="radio"name="optradio">Visa och Mastercard</label>
+                            </div>
+                            <div class="col-4 d-flex" id="payCardDiv">
+                                <img src="../img/visacard.png" alt=""class="img-fluid paycard">
+                                <img src="../img/mastercard.png" alt=""class="img-fluid paycard">
+                            </div>
+                            <div class="col-2">
+                                <p>0:-</p>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="col-6 radio">
+                                <label><input type="radio"name="optradio">Swish</label>
+                            </div>
+                            <div class="col-4 pr-4">
+                                <a href="#">Visa villkor</a>
+                            </div>
+                            <div class="col-2">
+                                <p>0:-</p>
+                            </div>
+                        </div>       
+                    </div>
+                    <h3 class="mb-0">
+                        <button class="btn accordionButton checkoutheader" type="button" id="showTermsAndC">GODKÄNN OCH BEKRÄFTA KÖP</button>
+                    </h3>  
+                    <div class="collapse" id="termsAndConditions">
+                        <div class="container" id="termsoforder">
+                            <p class="mt-3">Med "BEKRÄFTA KÖP" godkänner du XX:s <a href="#">Allmänna Villkor</a></p> 
+                            <p>För att ge dig en komplett medlemsupplevelse behandlar vi dina personuppgifter i enlighet med XX:s Integritetsmeddelande.</p>
+                            <button type="submit" class="btn" id="submitFormButton">BEKRÄFTA KÖP</button> 
+                        </div>     
+                    </div>
+                </form>
+            </div>  
+        </section>
+        <!-- Content End -->
+
+        <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row px-2 mt-4 mb-4 border-top">
+                    <div class="col-12 col-md-3 text-md-center col-lg-3 px-0">
+                        <div class="footer-widget my-4">
+                        <h4 class="mt-2 mb-1">Besöksadress</h4> 
+                        <div class="footer-widget-content pt-2">
+                            <ul>
+                                <li><h1 class="title m-0" id="footerLogo">Blomman</h1></li>
+                                <li>Tulegatan 41</li>
+                                <li>113 53 Stockholm</li>
+                                <li><a href="mailto:adress@butik.se" class="contact-link">hej@blomman.se</a></li>
+                                <li><a href="tel:0850829400" class="contact-link">08-508 294 00</a></li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 text-md-center col-lg-3 px-0">
+                        <div class="footer-widget my-4">
+                        <h4 class="mt-2 mb-1">Öppettider</h4>
+                        <div class="footer-widget-content pt-2 no-gutters d-flex justify-content-md-center">
+                            <div class="open-time">
+                                <table class="table table-responsive table-borderless text-md-center">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="openingtime pr-3">Måndag:</th>
+                                            <td class="openingtime">10.00–19.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="openingtime pr-3">Tisdag:</th>
+                                            <td class="openingtime">10.00–19.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="openingtime pr-3">Onsdag:</th>
+                                            <td class="openingtime">10.00–19.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="openingtime pr-3">Torsdag:</th>
+                                            <td class="openingtime">10.00–19.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="openingtime pr-3">Fredag:</th>
+                                            <td class="openingtime">10.00–19.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="openingtime pr-3">Lördag:</th>
+                                            <td class="openingtime">10.00–17.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="openingtime pr-3">Söndag:</th>
+                                            <td class="openingtime">11.00–15.00</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-12 col-md-3 text-md-center col-lg-3 px-0">
+                        <div class="footer-widget my-4">
+                            <h4 class="mt-2 mb-1">Villkor</h4>
+                            <div class="footer-widget-content pt-2">
+                                <ul>
+                                <li><a href="#">Köpvillkor</a></li>
+                                <li><a href="#">Användarvillkor</a></li>
+                                <li><a href="#">Cookie Villkor</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 text-md-center col-lg-3 px-0">
+                        <div class="footer-widget my-4">
+                            <h4 class="mt-2 mb-1">Följ oss</h4>
+                            <div class="footer-widget-content pt-3 pt-xl-2">
+                                <div class="container">
+                                    <div class="row justify-content-start justify-content-md-between justify-content-lg-center">
+                                        <div class="pr-3 px-md-0 px-lg-2"><a href="#"><img src="../img/002-facebook_grey.png" class="img-fluid" id="imgfb" alt="Facebook"/></a></div>
+                                        <div class="pr-3 px-md-0 px-lg-2"><a href="#"><img src="../img/003-instagram_grey.png" class="img-fluid" id="imgig" alt="Instagram"/></a></div>
+                                        <div class="pr-3 px-md-0 px-lg-2"><a href="#"><img src="../img/005-twitter_grey.png" class="img-fluid" id="imgtwi" alt="Twitter"/></a></div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End -->
+        
+    </body>
+</html>

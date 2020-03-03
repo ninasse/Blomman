@@ -1,0 +1,44 @@
+// FOOTER \\
+
+footer {
+        .title { // BLOMMAN
+            color: $hover;
+            font-weight: 900;
+            font-size: 1.2rem;
+        }
+        h4 {
+            color: $main-color;
+        }
+
+        a {
+            color: $font-color;
+            text-decoration: underline;
+                @media (min-width: 992px) {
+                    text-decoration: none; 
+                    &:hover {
+                        color: $hover;
+                        text-decoration: none;
+                        }
+                }
+        }
+        ul {
+        padding: 0;
+        margin: 0;
+            li {
+                font-family: $sfont-stack;
+                list-style: none;
+                color: $font-color;
+            }
+        }
+        th.openingtime, td.openingtime {
+            padding: 0;
+        }
+        table {
+            th, td {
+                font-family: $sfont-stack;
+            }
+        }
+        #imgfb, #imgtwi, #imgig {
+            height: 50px;
+        }    
+}

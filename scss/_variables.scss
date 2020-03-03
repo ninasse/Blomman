@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+
+// Variables | Fonts \\
+
+$font-stack: 'Montserrat', sans-serif; // Main Font
+$sfont-stack: 'Lato', sans-serif; // Secondary Font
+
+// Variables | Colors \\
+
+$font-color: #696969;
+$font-title-color: #443636;
+$main-color: rgb(237, 197, 245);
+$hover: rgb(213, 146, 226);
+$press:rgb(119, 70, 129);
+$main-color2: rgb(237, 197, 245);
+$main-color3: rgb(213, 146, 226);
+$bg-color: #FFFFFF;
+
+// FONTS & SIZES \\
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-stack;
+    color: $font-title-color;
+    font-weight: 600;
+  }
+
+p, span, label {
+    font-family: $sfont-stack;
+    color: $font-color;
+    font-size: 18px;
+}
+
+.currency-smaller-text {
+    font-size: 0.9rem;
+    padding-left: 4px;
+    @media (min-width: 576px) { font-size: 1rem; }
+}
+
+.currency-smaller-text-checkout {
+    font-size: 0.75rem;
+    display: inline-block;
+    padding-left: 2px;
+    margin: 0px;
+    @media (min-width: 576px) { font-size: 1rem; }
+}
+
+.orderRow-smaller-text {
+    span, p, label {
+        font-size: 0.85rem;
+    @media (min-width: 576px) { font-size: 1rem; }
+    // @media (min-width: 768px) { font-size: 1rem; }
+    // @media (min-width: 992px) { font-size: 1rem; }
+    // @media (min-width: 1200px) { font-size: 1rem; }
+    }
+    
+}
+
+#sum {
+    span, p, label {
+        font-size: 1rem;
+    }
+    
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+    @media (min-width: 360px) { font-size: 1.25rem; }
+    @media (min-width: 992px) { font-size: 1.4rem; }
+}

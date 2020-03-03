@@ -1,0 +1,5 @@
+@mixin hyphens() {
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}

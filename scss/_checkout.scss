@@ -1,0 +1,165 @@
+h1.checkoutheader {
+    text-align: center;
+    background-color: $main-color;
+    // for being able to have the necessary h1 but not using its size, instead taking the value of h3:
+    font-size: 1.5rem;
+    color: $font-title-color;
+}
+#prodHeader {
+    padding-left: 0;
+    padding-right: 0;
+}
+#quantHeader {
+    padding-left: 0.5rem;
+    padding-right: 0;
+    @media (min-width: 768px) {
+        padding-left: 2rem;
+    }
+    @media (min-width: 1024px) {
+        padding-left: 3.1rem;
+    }
+    @media (min-width: 1200px) {
+        padding-left: 3.5rem;
+    }
+}
+#priceHeader{
+    padding-left: 0;
+    padding-right: 0;
+}
+#totHeader{
+    padding-left: 0;
+    padding-right: 0;
+}
+.should-hyphenate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+#prodPrice {
+    @media (min-width: 768px){
+        padding-left: 1.1rem;
+    }
+}
+
+#minusButton, #plusButton, #deleteButton{
+    font-size: 0.7rem;
+    color: $font-title-color;
+    background-color: $main-color;
+    border-radius: 50%;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+#sum {
+    #vatTotal, #sumTotal {
+        padding-left: 2rem;
+    }
+    p {
+        font-size: 0.9rem;
+    } 
+}
+
+#deleteButton {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+.accordion {
+    .accordionButton {
+        width: 100%;
+        border-radius: 0;
+        background-color: $main-color;
+        border: 1px solid $hover;
+        font-family: $font-stack;
+        color: $font-title-color;
+        font-weight: 600;
+    }
+    .accordionButton:hover{
+        background-color: $hover;
+    }
+    form {
+        #customerDetails{
+            padding: 1rem;
+            label {
+                font-size: 0.95rem;
+            }
+            .form-group {
+                input {
+                    font-size: 0.9rem;
+                }
+
+                #customerZip::-webkit-inner-spin-button,
+                #customerZip::-webkit-outer-spin-button {
+                  -webkit-appearance: none; 
+                }
+            }
+            @media(min-width: 768px) {
+                padding: 2rem;
+            }
+            @media(min-width: 1400px) {
+                padding: 5rem;
+            }  
+        }
+        #paymentMethod {
+            .radio {
+                @media(min-width: 1024px) {
+                    padding-left: 5rem;
+                    padding-right: 0;
+                }
+            }
+            label {
+                font-size: 0.8rem;
+                input {
+                    margin-right: 0.5rem;
+                }
+            }
+            #payCardDiv {
+                padding-right: 0;
+                img.paycard {
+                    width: 30%;
+                    height: 40%;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+                @media(min-width: 768px) {
+                    padding-right: 5rem;
+                }
+                @media(min-width: 1024px) {
+                    padding-left: 0;
+                    padding-right: 6rem;
+                }
+                @media(min-width: 1400px) {
+                    padding-right: 10rem;
+                }
+            }
+            a {
+                font-size: 0.8rem;
+            }
+        }
+        #termsoforder {
+            text-align: center;
+                p {
+                   font: $sfont-stack;
+                   font-size: 0.9rem;
+                }
+                a {
+                    display: block;
+                }
+                #submitFormButton {
+                    background-color: $main-color;
+                    color: $font-title-color;
+                }
+                #submitFormButton:hover {
+                    background-color: $hover;
+                }
+        }
+
+    
+    }
+}
+

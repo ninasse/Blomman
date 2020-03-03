@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Blomman.se - Bekräftelse </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- jQuery script -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+    <!-- Bootstrap script -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Own jQuery script -->
+    <!-- <script type="text/javascript" src="../js/main.js"></script> -->
+    <script type="text/javascript" src="../js/confirmation.js"></script>
+    <!-- <script type="text/javascript" src="../js/checkout.js"></script> -->
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+
+    <!-- Own CSS -->
+    <link rel="stylesheet" href="../css/main.css"/>
+
+    </head>
+<body>
+        <!-- Navbar Start -->
+        <div class="container">
+            <nav class="navbar navbar-expand bg-white d-flex justify-content-between border-bottom p-0">
+                <a class="navbar-brand p-0" href="../index.html">
+                    <div class="logo-container">
+                        <img src="../img/logo.jpg" alt="Logo Blomman.se" class="img-fluid" />
+                    </div>
+                </a>
+                <div class="navbar-nav" style="visibility: hidden;">
+                    <div class="nav-item">
+                        <button type="button" class="btn btn-link pr-3" id="cart">
+                            <img src="../img/shopping-cart.png" height="50" alt="Varukorg">
+                            <span class="badge badge-pill m-0"></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+<!-- Content Start -->
+<div class="container">
+    <div class="col-12 text-center">
+        <h3 class="orderConfirm mt-5">Orderbekräftelse</h3>
+        <span class="p2 mb-5">
+            Tack för att du väljer att handla hos oss på Blomma!<br>
+        </span>
+        <span class="orderNumberCtn p2 mb-5">
+            Vi har mottagit din beställning med ordernummer: </span><br><br>
+            <div id="on">
+
+            </div><br>
+        <span class="p2 mb-5"> 
+            Nästa gång vi hörs är ditt paket på väg till dig.<br>
+        </span>
+    </div>
+</div>
+
+<!-- Content End -->
+
+<!-- Footer Start -->
+<footer class="footer">
+    <div class="container">
+        <div class="row px-2 mt-4 mb-4 border-top">
+            <div class="col-12 col-md-3 text-md-center col-lg-3 px-0">
+                <div class="footer-widget my-4">
+                <h4 class="mt-2 mb-1">Besöksadress</h4> 
+                <div class="footer-widget-content pt-2">
+                    <ul>
+                        <li><h1 class="title m-0" id="footerLogo">Blomman</h1></li>
+                        <li>Tulegatan 41</li>
+                        <li>113 53 Stockholm</li>
+                        <li><a href="mailto:adress@butik.se" class="contact-link">hej@blomman.se</a></li>
+                        <li><a href="tel:0850829400" class="contact-link">08-508 294 00</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 text-md-center col-lg-3 px-0">
+                <div class="footer-widget my-4">
+                <h4 class="mt-2 mb-1">Öppettider</h4>
+                <div class="footer-widget-content pt-2 no-gutters d-flex justify-content-md-center">
+                    <div class="open-time">
+                        <table class="table table-responsive table-borderless text-md-center">
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="openingtime pr-3">Måndag:</th>
+                                    <td class="openingtime">10.00–19.00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="openingtime pr-3">Tisdag:</th>
+                                    <td class="openingtime">10.00–19.00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="openingtime pr-3">Onsdag:</th>
+                                    <td class="openingtime">10.00–19.00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="openingtime pr-3">Torsdag:</th>
+                                    <td class="openingtime">10.00–19.00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="openingtime pr-3">Fredag:</th>
+                                    <td class="openingtime">10.00–19.00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="openingtime pr-3">Lördag:</th>
+                                    <td class="openingtime">10.00–17.00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="openingtime pr-3">Söndag:</th>
+                                    <td class="openingtime">11.00–15.00</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-12 col-md-3 text-md-center col-lg-3 px-0">
+                <div class="footer-widget my-4">
+                    <h4 class="mt-2 mb-1">Villkor</h4>
+                    <div class="footer-widget-content pt-2">
+                        <ul>
+                        <li><a href="#">Köpvillkor</a></li>
+                        <li><a href="#">Användarvillkor</a></li>
+                        <li><a href="#">Cookie Villkor</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 text-md-center col-lg-3 px-0">
+                <div class="footer-widget my-4">
+                    <h4 class="mt-2 mb-1">Följ oss</h4>
+                    <div class="footer-widget-content pt-3 pt-xl-2">
+                        <div class="container">
+                            <div class="row justify-content-start justify-content-md-between justify-content-lg-center">
+                                <div class="pr-3 px-md-0 px-lg-2"><a href="#"><img src="../img/002-facebook_grey.png" class="img-fluid" id="imgfb" alt="Facebook"/></a></div>
+                                <div class="pr-3 px-md-0 px-lg-2"><a href="#"><img src="../img/003-instagram_grey.png" class="img-fluid" id="imgig" alt="Instagram"/></a></div>
+                                <div class="pr-3 px-md-0 px-lg-2"><a href="#"><img src="../img/005-twitter_grey.png" class="img-fluid" id="imgtwi" alt="Twitter"/></a></div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+    </body>
+</html>	

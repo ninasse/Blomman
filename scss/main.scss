@@ -1,0 +1,60 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'navbar.scss';
+@import 'footer.scss';
+@import 'checkout.scss';
+@import 'confirmation.scss';
+
+// Main \\
+
+body {
+    background-color: $bg-color;
+    #myjumbotron {
+        background-color: $bg-color;
+            @media (min-width: 1200px) {
+                #myJumbotronImgContainer {
+                    width: 1140 * 0.90px; 
+                }
+            }
+      }
+    .card {
+        .card-title {
+            @include hyphens;
+        }
+        .card-footer {
+            background-color: $bg-color;
+            #descriptionbutton {
+                background-color: $main-color;
+                color: $font-color;
+                border-color: $main-color;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            #descriptionbutton:hover {
+            background-color: $hover;
+            }
+            
+            #descriptionbutton:active {
+            background-color: $press;
+            }
+        }
+        .productDescr {
+            @include hyphens;
+            font-size: 0.95rem;
+        }
+        #addtocart {
+            background-color: $main-color;
+            color: $font-color;
+        }
+        #addtocart:hover {
+            background-color: $hover;
+        }
+        #addtocart:active {
+            background-color: $press;
+        }
+        button {
+            @media (min-width: 576px) { font-size: .95rem; }
+        }
+    }
+}
